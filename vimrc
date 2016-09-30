@@ -37,7 +37,7 @@ set hlsearch
 set showmatch
 
 " theme
-colorscheme deep-space
+colorscheme nova
 
 " syntastic setup
 set statusline+=%#warningmsg#
