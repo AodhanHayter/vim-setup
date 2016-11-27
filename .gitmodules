@@ -43,3 +43,6 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = git@github.com:mxw/vim-jsx.git
+[submodule "bundle/vim-togglecursor"]
+	path = bundle/vim-togglecursor
+	url = git@github.com:jszakmeister/vim-togglecursor.git
