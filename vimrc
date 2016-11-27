@@ -39,6 +39,9 @@ set showmatch
 " theme
 colorscheme nova
 
+" togglecursor setup
+let g:togglecursor_insert = 'blinking_underline'
+
 " syntastic setup
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
