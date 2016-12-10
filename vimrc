@@ -42,6 +42,10 @@ colorscheme nova
 " togglecursor setup
 let g:togglecursor_insert = 'blinking_underline'
 
+" emmet settings
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 " syntastic setup
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}

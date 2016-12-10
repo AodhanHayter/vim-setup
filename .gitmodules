@@ -46,3 +46,6 @@
 [submodule "bundle/vim-togglecursor"]
 	path = bundle/vim-togglecursor
 	url = git@github.com:jszakmeister/vim-togglecursor.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
