@@ -72,6 +72,12 @@ highlight link SyntasticStyleWarningSign SignColumn
 map <C-\> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
 
+" nerd-commenter setup
+let g:NERDSpaceDelims = 1
+
+" command-t
+let g:CommandTFileScanner = 'git'
+
 " lightline setup
 let g:lightline = {
       \ 'colorscheme': 'wombat',
@@ -120,7 +126,8 @@ function! LightLineFugitive()
 endfunction
 
 function! LightLineFilename()
-  return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
+  let nr = bufnr('')
+  return nr . ':' . ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
     \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
     \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
 endfunction
