@@ -15,6 +15,7 @@ set laststatus=2
 let mapleader=" "
 set backspace=indent,eol,start
 map <leader>s :source ~/.vimrc<CR>
+nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
 
 set updatetime=250
 set hidden
