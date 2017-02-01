@@ -15,7 +15,10 @@ set laststatus=2
 let mapleader=" "
 set backspace=indent,eol,start
 map <leader>s :source ~/.vimrc<CR>
+
+" use escape to remove highlight from search
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
+nnoremap <esc>^[ <esc>^[
 
 set updatetime=250
 set hidden
