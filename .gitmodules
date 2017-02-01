@@ -61,3 +61,6 @@
 [submodule "bundle/alchemist-vim"]
 	path = bundle/alchemist-vim
 	url = git@github.com:slashmili/alchemist.vim.git
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = git@github.com:w0rp/ale.git
