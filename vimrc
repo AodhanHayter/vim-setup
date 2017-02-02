@@ -11,6 +11,7 @@ set clipboard=unnamed
 set colorcolumn=100
 set number
 set noshowmode
+set nocompatible
 set laststatus=2
 let mapleader=" "
 set backspace=indent,eol,start
