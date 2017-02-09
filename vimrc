@@ -48,11 +48,16 @@ colorscheme nova
 " togglecursor setup
 let g:togglecursor_insert = 'blinking_underline'
 
+" delimitMate settings
+let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1
+let g:delimitMate_jump_expansion = 1
+let g:delimitMate_balance_matchpairs = 1
+
 " emmet settings
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-" B
 " ale setup
 let g:ale_linters = {
       \ 'javascript': ['eslint'],
@@ -70,6 +75,11 @@ let g:NERDSpaceDelims = 1
 
 " command-t
 let g:CommandTFileScanner = 'git'
+
+" vim-wiki settings
+let wiki = {}
+let wiki.nested_syntaxes = {'javascript': 'js', 'python': 'python'}
+let g:wiki_list = [wiki]
 
 " lightline setup
 let g:lightline = {
