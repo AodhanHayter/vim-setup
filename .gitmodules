@@ -82,3 +82,6 @@
 [submodule "bundle/vim-python-pep8-indent"]
 	path = bundle/vim-python-pep8-indent
 	url = git@github.com:Vimjas/vim-python-pep8-indent.git
+[submodule "bundle/vim-autotag"]
+	path = bundle/vim-autotag
+	url = git@github.com:craigemery/vim-autotag.git
