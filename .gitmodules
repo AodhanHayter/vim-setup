@@ -85,3 +85,6 @@
 [submodule "bundle/vimpy"]
 	path = bundle/vimpy
 	url = git@github.com:dbsr/vimpy.git
+[submodule "bundle/vim-gutentags"]
+	path = bundle/vim-gutentags
+	url = git@github.com:ludovicchabant/vim-gutentags.git
