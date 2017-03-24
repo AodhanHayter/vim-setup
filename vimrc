@@ -4,6 +4,7 @@ execute pathogen#helptags()
 filetype on
 filetype plugin on
 syntax on
+let python_highlight_all=1
 set term=xterm-256color
 set encoding=utf-8
 scriptencoding utf-8
@@ -14,6 +15,7 @@ set noshowmode
 set nocompatible
 set laststatus=2
 set path+=**
+set tags=tags;
 set wildmenu
 let mapleader=" "
 set backspace=indent,eol,start
@@ -50,6 +52,9 @@ colorscheme nova
 " togglecursor setup
 let g:togglecursor_insert = 'blinking_underline'
 
+" auto-tags
+let g:autotagTagsFile='tags'
+
 " delimitMate settings
 let g:delimitMate_expand_cr = 1
 let g:delimitMate_expand_space = 1
@@ -62,6 +67,7 @@ autocmd FileType html,css EmmetInstall
 
 " You complete me setup
 let g:ycm_autoclose_preview_window_after_completion = 1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " ale setup
 let g:ale_linters = {
@@ -75,7 +81,7 @@ let g:ale_sign_warning = '⚠️'
 
 " nerd-tree setup
 map <C-\> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
+let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp', '\.pyc', '__pycache__']
 
 " nerd-commenter setup
 let g:NERDSpaceDelims = 1
@@ -113,6 +119,17 @@ let g:lightline = {
       \ 'separator': { 'left': '⮀', 'right': '⮂' },
       \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
       \ }
+
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
 
 function! LightLineModified()
   if &filetype == "help"
