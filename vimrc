@@ -19,7 +19,10 @@ set tags=tags;
 set wildmenu
 let mapleader=" "
 set backspace=indent,eol,start
+
+"leader maps
 map <leader>s :source ~/.vimrc<CR>
+map <leader>ff :NERDTreeFind<CR>
 
 " use escape to remove highlight from search
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
