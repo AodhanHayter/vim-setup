@@ -88,3 +88,6 @@
 [submodule "bundle/vim-gutentags"]
 	path = bundle/vim-gutentags
 	url = git@github.com:ludovicchabant/vim-gutentags.git
+[submodule "bundle/vim-markdown-preview"]
+	path = bundle/vim-markdown-preview
+	url = git@github.com:JamshedVesuna/vim-markdown-preview.git
