@@ -88,3 +88,6 @@
 [submodule "bundle/vim-gutentags"]
 	path = bundle/vim-gutentags
 	url = git@github.com:ludovicchabant/vim-gutentags.git
+[submodule "bundle/vim-cython"]
+	path = bundle/vim-cython
+	url = git@github.com:tshirtman/vim-cython.git
