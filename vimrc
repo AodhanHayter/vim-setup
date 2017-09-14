@@ -9,8 +9,10 @@ set term=xterm-256color
 set encoding=utf-8
 scriptencoding utf-8
 set clipboard=unnamed
+set backupcopy=yes
 set colorcolumn=100
 set number
+set relativenumber
 set noshowmode
 set nocompatible
 set laststatus=2
@@ -23,6 +25,7 @@ set backspace=indent,eol,start
 "leader maps
 map <leader>s :source ~/.vimrc<CR>
 map <leader>ff :NERDTreeFind<CR>
+map <leader>co :set cursorcolumn! <bar> highlight CursorColumn guibg=yellow<CR>
 
 " use escape to remove highlight from search
 nnoremap <silent> <Esc> :nohlsearch<Bar>:echo<CR>
@@ -69,14 +72,18 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 " You complete me setup
-let g:ycm_autoclose_preview_window_after_completion = 1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_semantic_triggers = {
+  \ 'elm': ['.'],
+  \}
 
 " ale setup
 let g:ale_linters = {
       \ 'javascript': ['eslint'],
       \ 'elixir': ['credo'],
-      \ 'python': ['flake8']
+      \ 'python': ['flake8'],
+      \ 'elm': ['elm-make']
       \}
 
 let g:ale_sign_error = '❌'
@@ -133,6 +140,9 @@ if 'VIRTUAL_ENV' in os.environ:
   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
   execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+" elm
+let g:elm_format_autosave=1
 
 function! LightLineModified()
   if &filetype == "help"
